@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- slick slider -->
+    <link rel="stylesheet" href="./plugins/slick/slick.css">
+
+    <!-- icon font -->
+    <link rel="stylesheet" href="./fonts/style.css">
     <!-- styles -->
     <link rel="stylesheet" href="./styles/css/reset.css">
     <link rel="stylesheet" href="./styles/css/fonts.css">
@@ -13,8 +19,543 @@
 </head>
 <body>
     
+    <!-- header -->
+    <header class="header">
+        <!-- top -->
+        <div class="headerTop">
+            <div class="wrap headerTop__wrap">
+                <!-- interactions -->
+                <div class="headerTop__interactions">
+                    <div class="contactBlock headerTop__contactBlock ">
+                        <div class="contactBlock__inner">
+                            <a href="javascript://" class="contactBlock__phone contactBlock__phone--visible">
+                                <span class="icon-phone"></span>
+                                (044) 557 57 05
+                                <span class="icon-arrow"></span>
+                            </a>
     
+                            <a href="javascript://" class="contactBlock__phone">
+                                <span class="icon-phone"></span>
+                                (044) 557 57 05
+                            </a>
+    
+                            <a href="javascript://" class="contactBlock__phone">
+                                <span class="icon-phone"></span>
+                                (044) 557 57 05
+                            </a>
+    
+                            <a href="javascript://" class="contactBlock__mail">
+                                <span class="icon-mail"></span>
+                                sales@smart-ua.online
+                            </a>
+    
+                            <div class="contactBlock__bottomText">
+                                <p>
+                                    Режим роботи: <br>
+                                    Пн-Сб 10:00-20:00
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="javascript://" class="headerTop__iconLink">
+                        <span class="icon-shops"></span>
+                        Магазины
+                    </a>
+                </div>
+
+                <a href="./index.html" class="logo headerTop__logo">
+                    <img src="./img/logo.png" alt="">
+                </a>
+
+                <nav class="headerTop__nav">
+                    <a href="javascript://" class="headerTop__link">Про нас</a>
+                    <a href="javascript://" class="headerTop__link">Оплата і доставка</a>
+                    <a href="javascript://" class="headerTop__link">Гарантії</a>
+                    <a href="javascript://" class="headerTop__link">Контакти</a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- bottom -->
+        <div class="headerBottom">
+            <div class="wrap headerBottom__wrap">
+
+                <div class="headerBottom__left">
+
+                    <div class="headerBottom__toggler">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <a href="./index.html" class="logo headerBottom__logo">
+                        <img src="./img/logo.png" alt="">
+                    </a>
+                </div>
+
+                <a href="javascript://" class="catalogButton headerBottom__catalogButton">
+                    <span class="icon-catalog-menu"></span>
+                    Каталог товарів
+                </a>
+
+                <div class="headerBottom__navButtons">
+                    <!-- search -->
+                    <div class="search headerBottom__search">
+                        <div class="search__row">
+                            <input placeholder="Пошук товарів" type="text">
+                            <span class="icon-close"></span>
+                        </div>
+                        <span class="icon-search search__icon"></span>
+                    </div>
+
+                    <a href="javascript://" class="headerBottom__icon headerBottom__icon--compare">
+                        <span class="icon-scales"></span>
+                    </a>
+
+                    <a href="javascript://" class="headerBottom__icon headerBottom__icon--whishlist">
+                        <span class="icon-wishlist"></span>
+                    </a>
+
+                    <a href="javascript://" class="headerBottom__cart">
+                        <span class="icon-cart"></span>
+                        <div class="headerBottom__cart-label">5</div>
+                    </a>
+
+                    <div class="headerBottom__separator"></div>
+
+                    <a href="javascript://" class="headerBottom__loginBtn">
+                        <span class="icon-user"></span>
+                        Вхід
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+
+    <!-- top block -->
+    <div class="topBlock">
+        <div class="wrap topBlock__wrap">
+            <!-- catalog -->
+            <div class="catalog">
+
+                <div class="catalog__mobileHeading">
+                    <h5></h5>
+                    <span class="icon-close">Каталог</span>
+                </div>
+
+                <!-- menu -->
+                <div class="catalog__menu">
+                    <!-- category -->
+                    <div class="category catalog__category">
+                        <a href="javascript://" class="category__heading">
+                            <div class="category__img">
+                                <img src="./img/svg/apple.svg" alt="">
+                            </div>
+                            Apple техніка
+                            <span class="icon-arrow"></span>
+                        </a>
+
+                        <!-- category hover plate -->
+                        <div class="category__open">
+                            <!-- col -->
+                            <div class="category__col">
+                                <!-- list -->
+                                <ul class="category__list">
+                                    <span><a href="javascript:/">Смартфони Apple</a></span>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- category -->
+                    <div class="category catalog__category">
+                        <a href="javascript://" class="category__heading">
+                            <div class="category__img">
+                                <img src="./img/svg/xiaomi.svg" alt="">
+                            </div>
+                            Xiaomi техніка
+                            <span class="icon-arrow"></span>
+                        </a>
+
+                        <!-- category hover plate -->
+                        <div class="category__open">
+                            <!-- col -->
+                            <div class="category__col">
+                                <!-- list -->
+                                <ul class="category__list">
+                                    <span><a href="javascript:/">Xiaomi техніка</a></span>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- category -->
+                    <div class="category catalog__category">
+                        <a href="javascript://" class="category__heading">
+                            <div class="category__img">
+                                <img src="./img/svg/smartphones.svg" alt="">
+                            </div>
+                            Смартфони і телефони
+                            <span class="icon-arrow"></span>
+                        </a>
+
+                        <!-- category hover plate -->
+                        <div class="category__open">
+                            <!-- col -->
+                            <div class="category__col">
+                                <!-- list -->
+                                <ul class="category__list">
+                                    <span><a href="javascript:/">Смартфони і телефони</a></span>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- category -->
+                    <div class="category catalog__category">
+                        <a href="javascript://" class="category__heading">
+                            <div class="category__img">
+                                <img src="./img/svg/laptops-tablets.svg" alt="">
+                            </div>
+                            Ноутбуки та планшети
+                            <span class="icon-arrow"></span>
+                        </a>
+
+                        <!-- category hover plate -->
+                        <div class="category__open">
+                            <!-- col -->
+                            <div class="category__col">
+                                <!-- list -->
+                                <ul class="category__list">
+                                    <span><a href="javascript:/">Ноутбуки та планшети</a></span>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- category -->
+                    <div class="category catalog__category">
+                        <a href="javascript://" class="category__heading">
+                            <div class="category__img">
+                                <img src="./img/svg/personal-transport.svg" alt="">
+                            </div>
+                            Персональний транспорт
+                            <span class="icon-arrow"></span>
+                        </a>
+
+                        <!-- category hover plate -->
+                        <div class="category__open">
+                            <!-- col -->
+                            <div class="category__col">
+                                <!-- list -->
+                                <ul class="category__list">
+                                    <span><a href="javascript:/">Персональний транспорт</a></span>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- category -->
+                    <div class="category catalog__category">
+                        <a href="javascript://" class="category__heading">
+                            <div class="category__img">
+                                <img src="./img/svg/gamers.svg" alt="">
+                            </div>
+                            Товари для геймерів
+                            <span class="icon-arrow"></span>
+                        </a>
+
+                        <!-- category hover plate -->
+                        <div class="category__open">
+                            <!-- col -->
+                            <div class="category__col">
+                                <!-- list -->
+                                <ul class="category__list">
+                                    <span><a href="javascript:/">Товари для геймерів</a></span>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- category -->
+                    <div class="category catalog__category">
+                        <a href="javascript://" class="category__heading">
+                            <div class="category__img">
+                                <img src="./img/svg/tv.svg" alt="">
+                            </div>
+                            Телевізори та мультимедія
+                            <span class="icon-arrow"></span>
+                        </a>
+
+                        <!-- category hover plate -->
+                        <div class="category__open">
+                            <!-- col -->
+                            <div class="category__col">
+                                <!-- list -->
+                                <ul class="category__list">
+                                    <span><a href="javascript:/">Телевізори та мультимедія</a></span>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- category -->
+                    <div class="category catalog__category">
+                        <a href="javascript://" class="category__heading">
+                            <div class="category__img">
+                                <img src="./img/svg/audio-equipment.svg" alt="">
+                            </div>
+                            Аудіо техніка
+                            <span class="icon-arrow"></span>
+                        </a>
+
+                        <!-- category hover plate -->
+                        <div class="category__open">
+                            <!-- col -->
+                            <div class="category__col">
+                                <!-- list -->
+                                <ul class="category__list">
+                                    <span><a href="javascript:/">Аудіо техніка</a></span>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- category -->
+                    <div class="category catalog__category">
+                        <a href="javascript://" class="category__heading">
+                            <div class="category__img">
+                                <img src="./img/svg/smart-house.svg" alt="">
+                            </div>
+                            Розумний будинок
+                            <span class="icon-arrow"></span>
+                        </a>
+
+                        <!-- category hover plate -->
+                        <div class="category__open">
+                            <!-- col -->
+                            <div class="category__col">
+                                <!-- list -->
+                                <ul class="category__list">
+                                    <span><a href="javascript:/">Розумний будинок</a></span>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- category -->
+                    <div class="category catalog__category">
+                        <a href="javascript://" class="category__heading">
+                            <div class="category__img">
+                                <img src="./img/svg/gadgets.svg" alt="">
+                            </div>
+                            Гаджети
+                            <span class="icon-arrow"></span>
+                        </a>
+
+                        <!-- category hover plate -->
+                        <div class="category__open">
+                            <!-- col -->
+                            <div class="category__col">
+                                <!-- list -->
+                                <ul class="category__list">
+                                    <span><a href="javascript:/">Гаджети</a></span>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- category -->
+                    <div class="category catalog__category">
+                        <a href="javascript://" class="category__heading">
+                            <div class="category__img">
+                                <img src="./img/svg/household-appliances.svg" alt="">
+                            </div>
+                            Побутова техніка
+                            <span class="icon-arrow"></span>
+                        </a>
+
+                        <!-- category hover plate -->
+                        <div class="category__open">
+                            <!-- col -->
+                            <div class="category__col">
+                                <!-- list -->
+                                <ul class="category__list">
+                                    <span><a href="javascript:/">Побутова техніка</a></span>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- category -->
+                    <div class="category catalog__category">
+                        <a href="javascript://" class="category__heading">
+                            <div class="category__img">
+                                <img src="./img/svg/baby-products.svg" alt="">
+                            </div>
+                            Дитячі товари
+                            <span class="icon-arrow"></span>
+                        </a>
+
+                        <!-- category hover plate -->
+                        <div class="category__open">
+                            <!-- col -->
+                            <div class="category__col">
+                                <!-- list -->
+                                <ul class="category__list">
+                                    <span><a href="javascript:/">Дитячі товари</a></span>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- category -->
+                    <div class="category catalog__category">
+                        <a href="javascript://" class="category__heading">
+                            <div class="category__img">
+                                <img src="./img/svg/for-cars.svg" alt="">
+                            </div>
+                            Товари для автомобілей
+                            <span class="icon-arrow"></span>
+                        </a>
+
+                        <!-- category hover plate -->
+                        <div class="category__open">
+                            <!-- col -->
+                            <div class="category__col">
+                                <!-- list -->
+                                <ul class="category__list">
+                                    <span><a href="javascript:/">Товари для автомобілей</a></span>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- category -->
+                    <div class="category catalog__category">
+                        <a href="javascript://" class="category__heading">
+                            <div class="category__img">
+                                <img src="./img/svg/used-goods.svg" alt="">
+                            </div>
+                            Техніка б/у
+                            <span class="icon-arrow"></span>
+                        </a>
+
+                        <!-- category hover plate -->
+                        <div class="category__open">
+                            <!-- col -->
+                            <div class="category__col">
+                                <!-- list -->
+                                <ul class="category__list">
+                                    <span><a href="javascript:/">Техніка б/у</a></span>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                    <li><a href="javascript://">iPhone 13 Pro Max</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog__arrow">
+                    <span class="icon-arrow"></span>
+                </div>
+
+                <div class="contactBlock contactBlock--mobile">
+                    <div class="contactBlock__inner">
+                        <a href="javascript://" class="contactBlock__phone contactBlock__phone--visible">
+                            <span class="icon-phone"></span>
+                            (044) 557 57 05
+                            <span class="icon-arrow"></span>
+                        </a>
+
+                        <a href="javascript://" class="contactBlock__phone">
+                            <span class="icon-phone"></span>
+                            (044) 557 57 05
+                        </a>
+
+                        <a href="javascript://" class="contactBlock__phone">
+                            <span class="icon-phone"></span>
+                            (044) 557 57 05
+                        </a>
+
+                        <a href="javascript://" class="contactBlock__mail">
+                            <span class="icon-mail"></span>
+                            sales@smart-ua.online
+                        </a>
+
+                        <div class="contactBlock__bottomText">
+                            <p>
+                                Режим роботи: <br>
+                                Пн-Сб 10:00-20:00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- catalog end -->
+
+            <!-- main slider -->
+            <div class="mainSlider">
+                <div class="mainSlider__item">
+                    <img src="./img/01.png" alt="">
+                </div>
+                <div class="mainSlider__item">
+                    <img src="./img/01.png" alt="">
+                </div>
+                <div class="mainSlider__item">
+                    <img src="./img/01.png" alt="">
+                </div>
+            </div>
+            <!-- main slider end -->
+        </div>
+    </div>
+
     <script src="./js/jquery-3.5.1.min.js"></script>
+    <!-- slick slider -->
+    <script src="./plugins/slick/slick.min.js"></script>
     <script src="./js/index.js"></script>
 
 </body>

@@ -1,0 +1,67 @@
+@import './variables.scss';
+
+@media screen and (max-width: 1000px) {
+  .headerTop {
+    &__link {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+    
+    &__wrap {
+      grid-template-columns: 1fr 100px 1fr;
+      grid-gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .headerTop {
+    display: none;
+  }
+
+  .catalogButton {
+    display: none;
+  }
+
+  .headerBottom {
+    &__left {
+      display: flex;
+      align-items: center;
+    }
+
+    &__logo {
+      max-width: 120px;
+    }
+
+    &__toggler {
+      display: flex;
+      flex-direction: column;
+      width: 30px;
+      min-width: 30px;
+      height: 20px;
+      position: relative;
+      margin-right: 20px;
+      cursor: pointer;
+      span {
+        width: 100%;
+        height: 2px;
+        background: $accent-blue;
+        position: absolute;
+        &:first-child {
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          top: 50%;
+          transform: translateY(-50%);
+
+        }
+
+        &:last-child {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
