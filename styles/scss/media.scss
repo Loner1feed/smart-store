@@ -63,5 +63,263 @@
         }
       }
     }
+
+    &__wrap {
+      grid-template-columns: 170px 1fr;
+    }
+  }
+
+  .topBlock {
+    &__wrap {
+      display: block;
+    }
+  }
+
+  .catalog {
+    position: fixed;
+    z-index: 10;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    max-height: 100vh;
+    transition: 0.3s;
+    transform: translateX(-100%);
+    max-width: 430px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+
+
+    &__arrow {
+      display: none;
+    }
+
+    &__mobileHeading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 15px;
+      padding-bottom: 20px;
+
+      h5 {
+        font-size: 24px;
+      }
+
+      span {
+        font-size: 22px;
+        cursor: pointer;
+      }
+    }
+
+    &__menu {
+      height: 100%;
+      overflow-y: scroll;
+    }
+
+    &--open {
+      transform: translateX(0);
+    }
+  }
+
+  .category {
+    &__heading {
+      border-radius: 0;
+      &:hover {
+        background: #fff;
+        color: #000;
+        span {
+          color: #000;
+        }
+      }
+
+      &--active {
+        span {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+
+    &__open {
+      position: unset;
+      transform: unset;
+      box-shadow: none;
+      border-radius: 0;
+      padding: 0;
+      right: unset;
+      top: unset;
+      height: auto;
+    }
+
+    &__col {
+      width: 100%;  
+      height: min-content;
+      li {
+        a {
+          display: block;
+          border-radius: 0;
+        }
+      }
+
+      span a {
+        display: block;
+        border-radius: 0;
+      }
+    }
+
+    &__list {
+      margin: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .dropList {
+    display: block;
+    border-top: 1px solid #DFDFDF;
+    border-bottom: 1px solid #DFDFDF;
+    &__heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      color: #000;
+      padding-right: 15px;
+      font-weight: 600;
+      padding-left: 44px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      span {
+        font-size: 10px;
+      }
+
+      &--active {
+        span {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    &__body {
+      display: none;
+      padding-bottom: 15px;
+      padding-left: 44px;
+      padding-right: 15px;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: $accent-blue;
+      span {
+        margin-right: 10px;
+      }
+    }
+
+    &__grayText {
+      color: #5e5e5e;
+      padding-left: 25px;
+      
+    }
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .headerBottom {
+
+    &__wrap {
+      grid-gap: 10px;
+      padding-right: 0;
+    }
+
+    &__icon {
+      height: 38px;
+      min-width: 60px;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      &:not(:last-child) {
+        border-right: 1px solid #c3d4e8;
+      }
+
+      &--compare {
+        display: none;
+      }
+
+      &--whishlist {
+        order: 3;
+      }
+    }
+
+    &__separator {
+      display: none;
+    }
+
+    &__cart {
+      order: 4;
+      height: 38px;
+      min-width: 60px;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      
+      &-label {
+        top: 2px;
+        right: 6px;
+        transform: unset;
+      }
+    }
+
+    &__loginBtn {
+      order: 2;
+      height: 38px;
+      min-width: 60px;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      border-right: 1px solid #c3d4e8;
+      span {
+        margin-right: 0;
+      }
+
+      p {
+        display: none;
+      }
+    }
+
+  }
+
+  .search {
+    order: 1;
+    height: 38px;
+    min-width: 60px;
+    width: 60px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #c3d4e8;
+    &__row {
+      padding: 10px 20px;
+      background: #fff;
+      position: fixed;
+      width: 100%;
+      top: 52px;
+      left: 0px;
+      right: 0px;
+      z-index: 3;
+
+      span {
+        right: 35px;
+        z-index: 2;
+      }
+      
+    }
   }
 }
