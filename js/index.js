@@ -24,7 +24,7 @@ $(document).ready(function() {
 
   // desktop catalog logics 
 
-  if(Number($(document).width()) > 800) {
+  if(Number($(window).width()) >= 800) {
     $('.catalog').hover(function() {
       $(this).addClass('catalog--hovered')
     }, () => {})
@@ -38,16 +38,14 @@ $(document).ready(function() {
       $('.catalog').removeClass('catalog--hovered')
       $(this).removeClass('category__open--open');
     })
-  }
-
-
-  if(Number($(document).width()) <= 800) {
-
-    $('.headerBottom__toggler').click(() => {
+  } else {
+    $('.headerBottom__toggler').click(function() {
+      $('.cover').addClass('cover--active')
       $('.catalog').addClass('catalog--open');
     })
 
     $('.catalog__mobileHeading span').click(() => {
+      $('.cover').removeClass('cover--active')
       $('.catalog').removeClass('catalog--open');
     })
 
@@ -131,5 +129,17 @@ $(document).ready(function() {
   $('.colorBlock__item').click(function() {
     $(this).closest('.colorBlock').children('.colorBlock__item').removeClass('colorBlock__item--active');
     $(this).addClass('colorBlock__item--active');
+  })
+
+
+
+  //
+  $('.advBlock__heading').click(function(){
+    $('.advBlock__grid').slideToggle();
+  })
+
+
+  $('.footer__heading').click(function(){
+    $(this).siblings('.footer__body').slideToggle();
   })
 })
