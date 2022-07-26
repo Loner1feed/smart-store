@@ -63,4 +63,73 @@ $(document).ready(function() {
       $(this).toggleClass('dropList__heading--active')
     })
   }
+
+
+  // counter ligics 
+  $('.counter__plus').click(function() {
+    let value = Number($(this).siblings('p').text());
+    value++;
+    $(this).siblings('p').text(value)
+  })
+
+  $('.counter__minus').click(function() {
+    let value = Number($(this).siblings('p').text());
+    if(value > 1) {
+      value--;
+      $(this).siblings('p').text(value)
+    }
+  })
+
+
+  // cart open/close
+  $('.headerBottom__cart').click(function() {
+    $('.cover').addClass('cover--active');
+    $('.cart').addClass('cart--open');
+  })
+
+  $('.cart__close').click(function() {
+    $('.cover').removeClass('cover--active');
+    $('.cart').removeClass('cart--open');
+  })
+
+
+
+
+  //
+  $('.slider__body').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    nextArrow: '<a class="slider__arrow slider__arrow--next"><span class="icon-arrow"></span></a>',
+    prevArrow: '<a class="slider__arrow slider__arrow--prev"><span class="icon-arrow"></span></a>',
+    responsive: [
+      {
+        breakpoint: 1150,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+    ]
+  })
+
+
+  //
+  $('.colorBlock__item').click(function() {
+    $(this).closest('.colorBlock').children('.colorBlock__item').removeClass('colorBlock__item--active');
+    $(this).addClass('colorBlock__item--active');
+  })
 })

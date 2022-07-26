@@ -1,6 +1,6 @@
 @import './variables.scss';
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1080px) {
   .headerTop {
     &__link {
       &:not(:last-child) {
@@ -11,6 +11,41 @@
     &__wrap {
       grid-template-columns: 1fr 100px 1fr;
       grid-gap: 20px;
+    }
+  }
+
+  .mainCat {
+    &__row {
+
+      &--1 {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      &--2 {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      &--3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    &__item {
+      &--big {
+        p {
+          font-size: 48px;
+        }
+      }
+
+      &--small {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .slider{
+    &__prodCard {
+      margin: 0px 10px;
     }
   }
 }
@@ -85,8 +120,8 @@
     max-height: 100vh;
     transition: 0.3s;
     transform: translateX(-100%);
+    width: 90vw;
     max-width: 430px;
-    width: 100%;
     padding-left: 0;
     padding-right: 0;
 
@@ -227,10 +262,27 @@
       
     }
   }
+
+  .mainCat {
+    &__item {
+      justify-content: space-between;
+      &--small {
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }
 
 
 @media screen and (max-width: 600px) {
+
+  .wrap {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
   .headerBottom {
 
     &__wrap {
@@ -321,5 +373,73 @@
       }
       
     }
+  }
+
+  .cart {
+    transform: unset;
+    visibility: hidden;
+    opacity: 0;
+    max-width: 100%;
+    width: 100%;
+    &--open {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .mainCat {
+    &__item {
+      p {
+        font-size: 28px;
+      }
+
+      &--small {
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 25px;
+        padding-bottom: 10px;
+        p {
+          font-size: 20px;
+        }
+      }
+
+      &--big {
+        .mainCat__img {
+          max-width: 150px;
+        }
+      }
+    }
+
+    &__row {
+      grid-gap: 0;
+      grid-template-rows: repeat(auto-fit, 150px);
+      &__img {
+        height: 100%;
+        img {
+          height: 100px;
+          object-fit: cover;
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+      &--3 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: unset;
+      }
+    }
+
+    &__img {
+      max-width: 150px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .headerBottom {
+    
   }
 }
