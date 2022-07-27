@@ -11,6 +11,25 @@
       }
     }
   }
+
+
+  .categoryBlock{
+
+    &__wrap {
+      grid-template-columns: 250px 1fr;
+      grid-gap: 20px;
+    }
+
+    &__grid {
+      grid-column-gap: 20px;
+      grid-row-gap: 30px;
+      
+    }
+
+    &__filter {
+
+    }
+  }
 }
 
 @media screen and (max-width: 1080px) {
@@ -72,6 +91,13 @@
   .brands {
     &__wrap {
       grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+
+  .categoryBlock {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
@@ -329,8 +355,48 @@
       grid-row-gap: 30px;
     }
   }
-}
 
+
+  .categoryBlock {
+
+    &__wrap {
+      display: block;
+      grid-template-columns: unset;
+
+    }
+
+    &__main {
+      padding-left: 0;
+    }
+
+    &__filter {
+      position: fixed;
+      background: #fff;
+      padding-right: 45px;
+      z-index: 5;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      overflow-x: hidden;
+      padding-bottom: 30px;
+      max-width: 380px;
+      padding-left: 15px;
+      transform: translateX(-100%);
+      transition: 0.3s;
+      &--open {
+        transform: translateX(0);
+      }
+    }
+
+    &__grid {
+      // grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__sortRow {
+      justify-content: space-between;
+    }
+  }
+}
 
 @media screen and (max-width: 600px) {
 
@@ -634,6 +700,19 @@
   .slider {
     &__title {
       margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 539px) {
+  .categoryBlock {
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__prodCard {
+      max-width: 350px; 
+      margin: 0px auto;
     }
   }
 }

@@ -142,4 +142,27 @@ $(document).ready(function() {
   $('.footer__heading').click(function(){
     $(this).siblings('.footer__body').slideToggle();
   })
+
+
+  //
+  $(".numberonly").keypress(function (e) {
+    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+     return false;
+   }
+  });  
+
+  //
+  $('.priceRange__range').slider({
+    range: true,
+    min: 500,
+    max: 83599,
+    values: [ 0, 83599 ],
+  });
+
+
+  //
+  $('.filter__heading--collapsable').click(function() {
+    $(this).siblings('.filter__body').slideToggle()
+  })
+
 })
