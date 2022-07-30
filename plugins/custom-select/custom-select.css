@@ -1,0 +1,68 @@
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  /* font-family: Arial; */
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background: #eff5fc;
+  color: #000;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "\e901";
+  transform: rotate(90deg);
+  right: 10px;
+  font-size: 9px;
+  font-family: 'icomoon';
+
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-bottom-color: #ABC0D7;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: #000;
+  /* width: 125px; */
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  height: 38px;
+  border: 1px solid #ABC0D7;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background: #eff5fc;
+  color: #000;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-items div {
+  border-top: none;
+  border-radius: 0;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}

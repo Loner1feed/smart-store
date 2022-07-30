@@ -165,4 +165,38 @@ $(document).ready(function() {
     $(this).siblings('.filter__body').slideToggle()
   })
 
+  //
+  $('.filterButton').click(function() {
+    $('.cover').addClass('cover--active');
+    $('.filter').addClass('categoryBlock__filter--open')
+  })
+
+
+  $('.filter__mobileHeading span').click(function() {
+    $('.cover').removeClass('cover--active');
+    $('.filter').removeClass('categoryBlock__filter--open')
+  })
+
+
+
+  //
+
+  $('.gallerySlider__for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.gallerySlider__nav'
+  });
+  $('.gallerySlider__nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.gallerySlider__for',
+    focusOnSelect: true,
+    nextArrow: '<a class="gallerySlider__arrow gallerySlider__arrow--next"><span class="icon-arrow"></span></a>',
+    prevArrow: '<a class="gallerySlider__arrow gallerySlider__arrow--prev"><span class="icon-arrow"></span></a>',
+  });
+
+
+  $('.tabBlock__wrap').tabs();
 })
