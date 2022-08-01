@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- jq ui -->
+  <link rel="stylesheet" href="./plugins/jqui/jquery-ui.css">
+
+  <!-- slick slider -->
+  <link rel="stylesheet" href="./plugins/slick/slick.css">
+
+  <!-- icon font -->
+  <link rel="stylesheet" href="./fonts/style.css">
+  <!-- styles -->
+  <link rel="stylesheet" href="./styles/css/reset.css">
+  <link rel="stylesheet" href="./styles/css/fonts.css">
+  <link rel="stylesheet" href="./styles/css/index.css">
+  <link rel="stylesheet" href="./styles/css/media.css">
+
+</head>
+
+<body>
+
+  <div class="checkoutBlock">
+    <div class="wrap checkoutBlock__wrap">
+      <!-- crumbs -->
+      <div class="crumbs checkoutBlock__crumbs">
+        <a href="javascript://">Головна</a>
+        <span>Оформлення замовлення</span>
+      </div>
+
+      <!-- form -->
+      <form action="" class="checkForm checkoutBlock__checkForm">
+        <!-- section -->
+        <div class="checkForm__section">
+
+          <div class="checkForm__heading">
+            <h5>Спосіб доставки</h5>
+          </div>
+
+          <div class="checkForm__radioBlock">
+            <!-- radio input -->
+            <div class="radio checkForm__radio">
+              <input type="radio" name="delivery" id="delivery1">
+              <label for="delivery1">Самовивіз з магазину</label>
+            </div>
+
+            <!-- radio input -->
+            <div class="radio checkForm__radio">
+              <input type="radio" name="delivery" id="delivery2">
+              <label for="delivery2">Доставка у відділення Нової Пошти</label>
+            </div>
+
+            <!-- radio input -->
+            <div class="radio checkForm__radio">
+              <input type="radio" name="delivery" id="delivery3">
+              <label for="delivery3">Доставка кур’єром Нової пошти на адресу</label>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- section -->
+        <div class="checkForm__section">
+
+          <div class="checkForm__heading">
+            <h5>Спосіб оплати</h5>
+          </div>
+
+          <div class="checkForm__radioBlock">
+            <!-- radio input -->
+            <div class="radio checkForm__radio">
+              <input type="radio" name="payment" id="payment1">
+              <label for="payment1">Оплата готівкою при отриманні</label>
+            </div>
+
+            <!-- radio input -->
+            <div class="radio checkForm__radio">
+              <input type="radio" name="payment" id="payment2">
+              <label for="payment2">Оплата на карту</label>
+            </div>
+
+            <!-- radio input -->
+            <div class="radio checkForm__radio">
+              <input type="radio" name="payment" id="payment3">
+              <label for="payment3">Онлайн оплата LiqPay</label>
+            </div>
+
+            <!-- radio input -->
+            <div class="radio checkForm__radio">
+              <input type="radio" name="payment" id="payment4">
+              <label for="payment4">Оплата по безготівковому розрахунку</label>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- section -->
+        <div class="checkForm__section">
+          <div class="checkForm__heading">
+            <h5>Дані покупця</h5>
+
+            <a href="javascript://">Я ЗАРЕЄСТРОВАНИЙ</a>
+          </div>
+
+          <div class="isRegister checkForm__isRegister">
+            <span>Зареєструватися</span>
+            <!-- radio input -->
+            <div class="radio isRegister__radio">
+              <input type="radio" name="register" id="register1">
+              <label for="register1">Так</label>
+            </div>
+
+            <!-- radio input -->
+            <div class="radio isRegister__radio">
+              <input type="radio" name="register" id="register2" checked>
+              <label for="register2">Ні</label>
+            </div>
+          </div>
+
+          <div class="checkForm__fieldBlock">
+            <!-- field row -->
+            <div class="fieldRow checkForm__fieldRow">
+              <span>Ім’я *</span>
+              <input type="text" class="formField fieldRow__formField">
+            </div>
+
+            <!-- field row -->
+            <div class="fieldRow checkForm__fieldRow">
+              <span>Прізвище *</span>
+              <input type="text" class="formField fieldRow__formField">
+            </div>
+
+            <!-- field row -->
+            <div class="fieldRow checkForm__fieldRow">
+              <span>Телефон *</span>
+              <input type="text" class="formField fieldRow__formField" placeholder="+38(__)___-__-__">
+            </div>
+          </div>
+
+        </div>
+
+        <textarea name="comment" id="comment" class="checkForm__comment"
+          placeholder="Ваш коментар до замовлення"></textarea>
+
+
+        <a href="javascript://" class="checkForm__button">оформити замовлення</a>
+
+        <div class="checkForm__label">
+          Пітверджуючи замовлення ви погоджуєтеся з <a href="javascript://">Публічна оферта</a>
+        </div>
+      </form>
+
+      <!-- offer block -->
+      <div class="offerBlock checkoutBlock__offerBlock">
+        <h3>Ваше замовлення</h3>
+
+        <div class="offerBlock__items">
+          <!-- cart item -->
+          <div class="cart__item">
+
+            <span class="icon-delete cart__delete"></span>
+
+            <div class="cart__left">
+              <img src="./img/cart-item.png" alt="">
+              <div class="counter cart__counter">
+                <span class="counter__minus">-</span>
+                <p>1</p>
+                <span class="counter__plus">+</span>
+              </div>
+            </div>
+
+            <div class="cart__right">
+              <p>Смартфон Samsung Galaxy A13 3/32Gb Light Blue </p>
+              <div class="cart__price">
+                <s>13 999$</s>
+                <span>13 999$</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- cart item -->
+          <div class="cart__item">
+                
+            <span class="icon-delete cart__delete"></span>
+
+            <div class="cart__left">
+                <img src="./img/cart-item.png" alt="">
+                <div class="counter cart__counter">
+                    <span class="counter__minus">-</span>
+                    <p>1</p>
+                    <span class="counter__plus">+</span>
+                </div>
+            </div>
+
+            <div class="cart__right">
+                <p>Смартфон Samsung Galaxy A13 3/32Gb Light Blue </p>
+                <div class="cart__price">
+                    <s>13 999$</s>
+                    <span>13 999$</span>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="offerBlock__summary">
+          <span>Сума: 17 098 ₴</span>
+        </div>
+
+        <div class="offerBlock__total">
+          <span>Всього: 17 098 ₴</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./js/jquery-3.5.1.min.js"></script>
+  <!-- jq ui -->
+  <script src="./plugins/jqui/jquery-ui.min.js"></script>
+  <!-- slick slider -->
+  <script src="./plugins/slick/slick.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
