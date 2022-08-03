@@ -2441,6 +2441,10 @@ body {
     padding-top: 20px;
     padding-bottom: 100px;
   }
+
+  &__crumbs {
+    padding-bottom: 40px;
+  }
 }
 
 .shopsItem {
@@ -2474,11 +2478,12 @@ body {
 
 
 .addressRow {
-  display: flex;
-  align-items: center;
+  // display: inline-flex;
+  // align-items: center;
   font-size: 20px;
   b {
     margin-right: 5px;
+    display: inline;
   }
   span {
     color: $accent-blue;
@@ -2579,6 +2584,10 @@ body {
       height: 485px;
     }
   }
+
+  &__crumbs {
+    padding-bottom: 40px;
+  }
 }
 
 .letterForm {
@@ -2674,6 +2683,7 @@ body {
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.11);
     padding: 30px;
+    
     h3 {
       font-size: 30px;
       font-weight: 600;
@@ -2694,14 +2704,19 @@ body {
     }
   }
 
+  &__tableWrap {
+    overflow-y: hidden;
+  }
+
   &__table {
     width: 100%;
+    min-width: 600px;
+    
     tr {
       border-top: 1px solid #E1E1E1;
       td {
         text-align: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 10px;
         img {
           max-width: 100%;
           width: auto;

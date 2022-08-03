@@ -6,6 +6,23 @@
       max-width: 400px;
     }
   }
+
+  .accountBlock {
+    &__list {
+      max-width: 300px;
+    }
+
+    &__wrap {
+      grid-template-columns: 1fr 300px;
+    }
+
+    &__left {
+      width: 100%;
+    }
+    &__plateGrid {
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+  }
 }
 
 @media screen and (max-width: 1240px) {
@@ -174,10 +191,59 @@
     }
   }
 
-
   .categoryBlock {
     &__grid {
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .shopsBlock{
+    &__grid {
+      grid-gap: 30px;
+    }
+  }
+
+  .checkoutBlock {
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    &__crumbs {
+      order: 1;
+    }
+
+    &__checkForm {
+      order: 3;
+      max-width: 700px;
+      width: 100%;
+      margin: 0px auto;
+    }
+
+    &__offerBlock {
+      order: 2;
+      margin: 0px auto;
+      margin-bottom: 40px;
+    }
+  }
+
+  .contacts {
+    &__grid {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__info {
+      max-width: 700px;
+      width: 100%;
+      margin: 0px auto;
+    }
+
+    &__letterForm {
+      max-width: 700px;
+      width: 100%;
+      margin: 0px auto;
     }
   }
 }
@@ -207,6 +273,12 @@
           font-size: 15px;
         }
       }
+    }
+  }
+
+  .shopsBlock {
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
@@ -552,6 +624,68 @@
       width: 25px;
       height: 25px;
       transform: rotate(90deg);
+    }
+  }
+
+
+  .accountBlock {
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__list {
+      max-width: 100%;
+      margin-top: 0;
+    }
+
+    &__plateGrid {
+      grid-gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(137px, 1fr));
+    }
+
+    &__plateBlock {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      h3 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .plateItem {
+    height: 150px;
+    padding: 0px 15px;
+    img {
+      max-width: 30px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .contacts {
+    &__map {
+      iframe {
+        height: 400px;
+      }
+    }
+  }
+
+  .compareBlock {
+    &__body {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: -15px;
+      margin-left: -15px;
+      width: calc(100% + 30px);
+      max-width: calc(100% + 30px);
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    &__tableWrap {
+      margin-right: -15px;
+      margin-left: -15px;
     }
   }
 }
@@ -917,6 +1051,81 @@
       }
     }
   }
+
+  .shopsItem {
+    padding: 10px;
+    border-radius: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0px -15px;
+    box-shadow: none;
+    border-bottom: 1px solid #c7c7c7;
+  }
+
+  .offerBlock{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: -15px;
+    margin-left: -15px;
+    width: calc(100% + 30px);
+    max-width: calc(100% + 30px);
+    border-radius: 0;
+    box-shadow: none;
+    &__items {
+      // margin-right: -15px;
+      // margin-left: -15px;
+    }
+  }
+
+  .contacts{
+
+    h3 {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+
+    &__grid {
+      grid-gap: 20px;
+    }
+
+    &__info {
+      border-radius: 0;
+      margin: 0px -15px;
+      max-width: calc(100% + 30px);
+      width: calc(100% + 30px);
+      box-shadow: none;
+      padding: 15px;
+    }
+
+    &__map {
+      border-radius: 10px;
+    }
+  }
+
+
+  .letterForm {
+    border-radius: 0;
+    margin: 0px -15px;
+    max-width: calc(100% + 30px);
+    width: calc(100% + 30px);
+    box-shadow: none;
+    padding: 15px;
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__button {
+      margin-bottom: 0;
+    }
+  }
+
+  .addressRow {
+    font-size: 18px;
+  }
+
+  
 }
 
 @media screen and (max-width: 539px) {
@@ -933,6 +1142,41 @@
 }
 
 @media screen and (max-width: 480px) {
+
+
+  .headerBottom {
+    &__wrap {
+      grid-template-columns: repeat(2, auto);
+    }
+
+    &__icon {
+      min-width: 40px;
+      max-width: 40px;
+    }
+
+    &__loginBtn {
+      min-width: 40px;
+      max-width: 40px;
+    }
+
+    &__search {
+      min-width: 40px;
+      max-width: 40px;
+    }
+
+    &__cart {
+      min-width: 40px;
+      max-width: 40px;
+      margin-right: 10px;
+      &-label {
+        right: -2px;
+      }
+    }
+
+    &__logo {
+      max-width: 100px;
+    }
+  }
 
   .footer {
 
@@ -1022,6 +1266,10 @@
         font-size: 12px;
         margin-right: 5px;
       }
+    }
+
+    &__logo {
+      max-width: 120px;
     }
   }
 
@@ -1129,6 +1377,90 @@
 
       h5 {
         margin-right: 30px;
+      }
+    }
+  }
+
+  .shopsBlock {
+    &__crumbs {
+      padding-bottom: 20px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+
+  .shopsItem {
+    
+    h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__map {
+      iframe {
+        height: 250px;
+      }
+    }
+  }
+
+  .checkForm__heading {
+    flex-direction: column;
+    align-items: flex-start;
+    a {
+      margin-top: 10px;
+    }
+  }
+
+  .fieldRow {
+    flex-direction: column;
+    align-items: flex-start;
+    span {
+      max-width: 100px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .checkoutBlock{
+    &__crumbs {
+      padding-bottom: 20px;
+    }
+  }
+
+  .offerBlock {
+    padding-top: 10px;
+  }
+
+  .mainCat {
+    &__item {
+      &--small {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .slider {
+    &__arrow {
+      &--prev {
+        margin-left: -10px;
+      }
+
+      &--next {
+        margin-right: -10px;
+      }
+    }
+  }
+
+  .pagination {
+    a {
+      width: 30px;
+      height: 30px;
+      min-width: 30px;
+      &:not(:last-child) {
+        margin-right: 10px;
       }
     }
   }
