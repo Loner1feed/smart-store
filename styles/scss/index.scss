@@ -31,6 +31,35 @@ body {
   }
 }
 
+#up-button {
+  background: $accent-blue;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  span {
+    transform: rotate(-90deg);
+  }
+}
+#up-button:hover {
+  background: #036ad9;
+}
+#up-button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 // header 
 .headerTop {
@@ -60,6 +89,10 @@ body {
     color: inherit;
     font-size: 14px;
     white-space: nowrap;
+    transition: 0.3s;
+    &:hover {
+      color: #1083ff;
+    }
     &:not(:last-child) {
       margin-right: 30px;
     }
@@ -294,10 +327,14 @@ body {
   border-radius: 15px;
   font-weight: 600;
   text-transform: uppercase;
+  transition: 0.3s;
   span {
     color: #F7CC49;
     margin-right: 14px;
     font-size: 14px;
+  }
+  &:hover {
+    background: #036ad9;
   }
 }
 
@@ -656,11 +693,14 @@ body {
     border: 1px solid $accent-blue;
     color: $accent-blue;
     background: #fff;
-
+    transition: 0.3s;
     &--accent {
       background: $accent-blue;
       color: #fff;
       margin-bottom: 20px;
+      &:hover {
+        background: #036ad9;
+      }
     }
   }
 
@@ -1174,6 +1214,39 @@ body {
     padding-bottom: 55px;
     padding-right: 70px;
     padding-left: 70px;
+    p {
+      overflow: hidden;
+      display: -moz-box;
+      -moz-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      line-clamp: 5;
+      box-orient: vertical;
+      &.seo__open {
+        -webkit-line-clamp: unset;
+        line-clamp: unset;
+      }
+    }
+  }
+
+  &__toggler {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $accent-blue;
+    margin-top: 5px;
+    span {
+      margin-left: 5px;
+      font-size: 12px;
+      transform: rotate(90deg);
+    }
+
+    &--active {
+      span {
+        transform: rotate(90deg) scaleX(-1);
+      }
+    }
   }
 
   h2 {
@@ -1264,11 +1337,14 @@ body {
 
   &__phone {
     font-size: 26px;
+    display: block;
     text-align: center;
     text-decoration: none;
     font-weight: 600;
     color: $accent-blue;
-    margin-bottom: 30px;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
   }
 
   &__payments {
@@ -1296,7 +1372,7 @@ body {
       text-decoration: none;
       color: #000;
       // line-height: 32px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       display: flex;
       align-items: flex-start;
       span {
@@ -1304,6 +1380,15 @@ body {
         color: $accent-blue;
         margin-right: 5px;
         margin-top: 2px;
+      }
+    }
+
+    &--hover {
+      li a {
+        transition: 0.3s;
+        &:hover {
+          color: #1083ff;
+        }
       }
     }
   }
@@ -1351,6 +1436,21 @@ body {
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #E5E5E5;
+  }
+
+  &__credit {
+    font-size: 14px;
+    color: #515151;
+  }
+
+  &__author {
+    color: #808080;
+    font-size: 12px;
+    white-space: nowrap;
+    text-decoration: none;
+    img {
+      width: 15px;
+    }
   }
 }
 
@@ -1615,7 +1715,7 @@ body {
 .crumbs {
   display: flex;
   align-items: center;
-  
+  font-size: 14px;
   a {
     text-decoration: none;
     color: #000;
@@ -1756,8 +1856,12 @@ body {
     background: $accent-blue;
     border-radius: 15px;
     margin-right: 40px;
+    transition: 0.3s;
     span {
       margin-right: 15px;
+    }
+    &:hover {
+      background: #036ad9;
     }
   }
 
@@ -2206,6 +2310,10 @@ body {
     font-weight: 600;
     margin-top: 25px;
     margin-bottom: 25px;
+    transition: 0.3s;
+    &:hover {
+      background: #036ad9;
+    }
   }
 
   &__label {
@@ -2289,11 +2397,12 @@ body {
 }
 
 .formField {
-  padding: 15px 20px;
+  padding: 12px 20px;
   width: 100%;
   border: 1px solid #DADADA;
   font-size: 16px;
   font-family: 'sourceSans';
+  border-radius: 3px;
 }
 
 // offer block
@@ -2630,6 +2739,10 @@ body {
     border-radius: 15px;
     font-weight: 600;
     margin-bottom: 10px;
+    transition: 0.3s;
+    &:hover {
+      background: #036ad9;
+    }
   }
 }
 
@@ -2666,8 +2779,12 @@ body {
     color: #fff;
     background: $accent-blue;
     margin-bottom: 10px;
+    transition: 0.3s;
     span {
       margin-right: 10px;
+    }
+    &:hover {
+      background: #036ad9;
     }
     &--delete {
       background: #fff;

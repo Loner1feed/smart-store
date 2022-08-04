@@ -869,6 +869,12 @@
       span {
         transform: rotate(90deg);
       }
+
+      &--active {
+        span {
+          transform: scaleY(-1) rotate(90deg);
+        }
+      }
     }
 
     &__grid {
@@ -907,6 +913,10 @@
 
     &__inner {
       padding: 30px 20px;
+      p {
+        line-clamp: 10;
+        -webkit-line-clamp: 10;
+      }
     }
   }
 
@@ -931,6 +941,11 @@
     &__heading {
       display: flex;
       justify-content: space-between;
+      &--active {
+        span {
+          transform: rotate(-90deg);
+        }
+      }
     }
 
     &__logo {
@@ -1125,6 +1140,10 @@
     font-size: 18px;
   }
 
+  #up-button {
+    right: 10px;
+  }
+
   
 }
 
@@ -1206,6 +1225,12 @@
         display: block;
         font-size: 11px;
         transform: rotate(90deg);
+      }
+
+      &--active {
+        span{
+          transform: scaleY(-1) rotate(90deg);
+        }
       }
     }
 
