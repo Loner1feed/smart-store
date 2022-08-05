@@ -193,6 +193,11 @@
     width: 100%;
     margin: 0px auto;
   }
+
+  .paymentInfoBlock__grid {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 @media screen and (max-width: 900px) {
   .prodBlock__main {
@@ -1370,5 +1375,24 @@
   }
   .pagination a:not(:last-child) {
     margin-right: 10px;
+  }
+
+  .paymentInfoBlock__crumbs {
+    padding-bottom: 20px;
+  }
+  .paymentInfoBlock__col {
+    padding: 15px;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .paymentInfoBlock__col h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+  .paymentInfoBlock__section h5 {
+    margin-bottom: 10px;
   }
 }

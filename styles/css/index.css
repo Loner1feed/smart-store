@@ -2977,3 +2977,62 @@ body {
 .compareBlock--noHover:hover {
   background: #fff !important;
 }
+
+.paymentInfoBlock__title {
+  font-size: 30px;
+  font-weight: 600;
+}
+.paymentInfoBlock__wrap {
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+.paymentInfoBlock__crumbs {
+  padding-bottom: 45px;
+}
+.paymentInfoBlock__grid {
+  padding-top: 45px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 50px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.paymentInfoBlock__col {
+  border-radius: 25px;
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.11);
+          box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.11);
+  padding: 30px;
+}
+.paymentInfoBlock__col h3 {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 45px;
+}
+.paymentInfoBlock__section:not(:last-child) {
+  margin-bottom: 35px;
+}
+.paymentInfoBlock__section h5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.paymentInfoBlock__section h5 img {
+  margin-right: 20px;
+  max-width: 50px;
+  width: 100%;
+}
+.paymentInfoBlock__section p {
+  font-size: 18px;
+  line-height: 24px;
+}
