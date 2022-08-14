@@ -1,4 +1,44 @@
+$('.slider__body').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows: true,
+  nextArrow: '<a class="slider__arrow slider__arrow--next"><span class="icon-arrow"></span></a>',
+  prevArrow: '<a class="slider__arrow slider__arrow--prev"><span class="icon-arrow"></span></a>',
+  // mobileFirst:true,
+  responsive: [
+    {
+      breakpoint: 1150,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      }
+    },
+
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    },
+  ]
+})
+
 $(document).ready(function() {
+
+  // let sliderWidth = $('.slider').width();
+  // console.log(sliderWidth);
+
+  // $('.slider').width(sliderWidth + 20);
+  // $('.slider').width(sliderWidth);
 
 
   let width = $('.contactBlock__phone--visible').width();
@@ -94,35 +134,20 @@ $(document).ready(function() {
 
 
   //
-  $('.slider__body').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: true,
-    nextArrow: '<a class="slider__arrow slider__arrow--next"><span class="icon-arrow"></span></a>',
-    prevArrow: '<a class="slider__arrow slider__arrow--prev"><span class="icon-arrow"></span></a>',
-    responsive: [
-      {
-        breakpoint: 1150,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
+  // if(+$(window).width() > 600) {
+    
+  // } else {
+  //   $('.slider__body').slick({
+  //     slidesToScroll: 1,
+  //     arrows: true,
+  //     nextArrow: '<a class="slider__arrow slider__arrow--next"><span class="icon-arrow"></span></a>',
+  //     prevArrow: '<a class="slider__arrow slider__arrow--prev"><span class="icon-arrow"></span></a>',
+  //     slidesToShow: 1,
+  //   })
+  // }
 
-      {
-        breakpoint: 900,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
 
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-        }
-      },
-    ]
-  })
+  
 
 
   //
