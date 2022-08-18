@@ -65,18 +65,45 @@ $(document).ready(function() {
   // desktop catalog logics 
 
   if(Number($(window).width()) >= 800) {
-    $('.catalog').hover(function() {
+    $('.catalog--onPage').hover(function() {
       $(this).addClass('catalog--hovered')
     }, () => {})
   
     $('.category__heading').hover(function() {
       $('.category__open').removeClass('category__open--open')
-      $(this).siblings('.category__open').addClass('category__open--open')
+      $(this).siblings('.category__open').addClass('category__open--open');
+      let openWidth = $(this).siblings('.category__open').width();
+      let underCoverWidth = $('.catalog').width() + 55;
+      $('.catalog__underCover').width(`${underCoverWidth}px`);
     }, () => {})
   
-    $('.category__open').hover(() => {}, function() {
+    // $('.category__open').hover(() => {}, function() {
+    //   $('.catalog').removeClass('catalog--hovered')
+    //   $('catalog__underCover').width($('.catalog').width())
+    //   $(this).removeClass('category__open--open');
+    // })
+
+    $('.catalog--onPage').hover(() => {
+    }, function() {
+      $('.category__open--open').removeClass('category__open--open')
       $('.catalog').removeClass('catalog--hovered')
-      $(this).removeClass('category__open--open');
+    })
+
+    $('.catalog--notOnPage').hover(() => {
+    }, function() {
+      $('.category__open--open').removeClass('category__open--open')
+    })
+
+
+    $('.catalogButton').click(function() {
+      $('.catalog--notOnPage').toggleClass('catalog--show');
+      $(document).mouseup( function(e){ // событие клика по веб-документу
+        var div = $( ".catalog" ); // тут указываем ID элемента
+        if ( !div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
+          div.removeClass('catalog--show'); // скрываем его
+        }
+      });
     })
   } else {
     $('.headerBottom__toggler').click(function() {

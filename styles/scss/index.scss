@@ -200,7 +200,7 @@ body {
     height: 20px;
     .contactBlock__inner {
       position: absolute;
-      z-index: 2;
+      z-index: 5;
       top: -15px;
       left: -20px;
       border-radius: 15px;
@@ -240,6 +240,7 @@ body {
     display: grid;
     grid-template-columns: 220px 1fr;
     grid-gap: 30px;
+    position: relative;
   }
 
   &__navButtons {
@@ -328,6 +329,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   transition: 0.3s;
+  position: relative;
   span {
     color: #F7CC49;
     margin-right: 14px;
@@ -401,14 +403,27 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  z-index: 4;
   padding: 15px 5px;
   border-radius: 25px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.15);
   max-height: 500px;
+  max-width: 350px;
+  width: 100%;
 
   &__mobileHeading {
     display: none;
+  }
+
+  &__underCover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background: #000;
+    z-index: -1;
   }
 
   &__menu {
@@ -444,9 +459,27 @@ body {
       display: none;
     }
   }
+
+  &--notOnPage {
+    margin-bottom: -10px;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    left: 20px;
+    transition: 0.3s opacity;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &--show {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .category {
+  // position: relative;
+  // z-index: 10;
   &__heading {
     display: flex;
     align-items: center;
@@ -495,7 +528,7 @@ body {
     right: -35px;
     top: 0;
     transform: translateX(100%);
-    z-index: 3;
+    z-index: 10;
     display: none;
     &--open {
       display: flex;
@@ -1503,18 +1536,57 @@ body {
   &__drop {
     display: flex;
     align-items: center;
-    p {
+    position: relative;
+    // p {
+    //   
+    // }
+
+    // span {
+    //   
+    // }
+
+    select {
+      // A reset of styles, including removing the default dropdown arrow
+      appearance: none;
+      // Additional resets for further consistency
+      background-color: transparent;
+      border: none;
+      // padding: 0 1em 0 0;
+      margin: 0;
+      width: 100%;
+      font-family: inherit;
+      font-size: inherit;
+      cursor: inherit;
+      line-height: inherit;
       padding: 8px 10px;
-      border-radius: 5px;
-      border: 1px solid #D8D8D8;
+      padding-right: 25px;
+      padding-left: 13px; 
       font-size: 14px;
       color: #5e5e5e;
-      margin-right: 7px;
+      // paddingf-right: 7px;
+      
     }
 
-    span {
+    &::before {
+      content: '';
+      display: block;
+      width: 37px;
+      height: 32px;
+      border-radius: 5px;
+      border: 1px solid #D8D8D8;
+      position: absolute;
+      // left: -3px;
+      z-index: -1;
+    }
+
+    &::after {
+      font-family: 'icomoon' !important;
+      content: "\e901";
       font-size: 9px;
       transform: rotate(90deg);
+      position: absolute;
+      right: 0;
+      z-index: -1;
     }
   }
 

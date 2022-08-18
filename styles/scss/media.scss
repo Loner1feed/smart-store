@@ -365,7 +365,6 @@
     padding-left: 0;
     padding-right: 0;
 
-
     &__arrow {
       display: none;
     }
@@ -394,6 +393,12 @@
 
     &--open {
       transform: translateX(0);
+    }
+
+    &--notOnPage {
+      visibility: visible;
+      opacity: 1;
+      
     }
   }
 

@@ -339,6 +339,10 @@
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
+  .catalog--notOnPage {
+    visibility: visible;
+    opacity: 1;
+  }
 
   .category__heading {
     border-radius: 0;
